@@ -8,10 +8,17 @@ use Storage;
 class FormController extends Controller {
     function handleFormSubmission(Request $request) {
 
+
         //validate only image upload
-        $request->validate([
+        $validate  = $request->validate([
             'profile_picture' => 'image|mimes:jpeg,jpg,png|max:2048',
+            // 'profile_picture' => 'image|mimes:pdf|max:2048', //just to check validation error
         ]);
+
+        //check validation fail
+        if (!$validate) {
+            return redirect(route("form.get"))->withErrors($validate);
+        }
 
         //check validation error
         // if (@$request->fails()) {
