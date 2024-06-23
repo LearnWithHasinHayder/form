@@ -32,4 +32,5 @@
         <p>{{session("email")}}</p> --}}
         {{-- <p>{{ session("error") }}</p> --}}
     </form>
+
 </x-layout>

@@ -36,4 +36,15 @@
         @endif --}}
 
     </form>
+
+    <script>
+        // const dataFromLocalStorage = localStorage.getItem('data');
+        // if(!dataFromLocalStorage){
+        //     localStorage.setItem('data', '123');
+        // }else{
+        //     //set the html body to "not authorized";
+        //     //close the tab
+        //     window.close();
+        // }
+    </script>
 </x-layout>
